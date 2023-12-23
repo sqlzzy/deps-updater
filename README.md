@@ -32,3 +32,7 @@ Feedback and suggestions write to the [issue](https://github.com/sqlzzy/deps-upd
 ## Author
 
 - [Sergey Osipov](https://github.com/sqlzzy)
+
+## License
+
+[MIT](MIT.md)
