@@ -8,6 +8,14 @@
     "deps-updater": "node index.js",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqlzzy/deps-updater"
+  },
+  "bugs": {
+    "url": "https://github.com/sqlzzy/deps-updater/issues"
+  },
+  "homepage": "https://github.com/sqlzzy/deps-updater",
   "author": "Sergey Osipov (sqlzzy)",
   "license": "MIT",
   "devDependencies": {
