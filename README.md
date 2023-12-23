@@ -16,7 +16,7 @@ $ npm install --save-dev deps-updater
 
 ## Example
 
-[![example image](/media/example.png)]
+![example image](/media/example.png)
 
 ## File structure
 
