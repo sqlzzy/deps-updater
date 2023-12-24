@@ -15,9 +15,6 @@
   "bugs": {
     "url": "https://github.com/sqlzzy/deps-updater/issues"
   },
-  "publishConfig": {
-    "registry": "https://www.npmjs.com/package/deps-updater"
-  },
   "homepage": "https://github.com/sqlzzy/deps-updater",
   "author": "Sergey Osipov (sqlzzy)",
   "license": "MIT",
