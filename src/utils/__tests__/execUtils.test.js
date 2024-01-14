@@ -1,13 +1,30 @@
 import execAsync from "../execUtils.js";
 
-describe("execAsync", () => {
-  it("should resolve with stdout and stderr when the command is successful", async () => {
-    const result = await execAsync("ls");
-    expect(result.stdout).toBeDefined();
-    expect(result.stderr).toBe("");
+jest.mock("child_process", () => ({
+  exec: jest.fn(),
+}));
+
+describe("execAsync function", () => {
+  it("should resolve with stdout when the command is executed successfully", async () => {
+    const mockStdout = "Mocked standard output";
+    require("child_process").exec.mockImplementationOnce(
+      (command, callback) => {
+        callback(null, mockStdout, "");
+      }
+    );
+
+    const result = await execAsync("your command");
+    expect(result).toBe(mockStdout);
   });
 
-  it("should reject with an error when the command fails", async () => {
-    await expect(execAsync("unknown-command")).rejects.toThrow();
+  it("should reject with stderr when the command execution fails", async () => {
+    const mockStderr = "Mocked standard error";
+    require("child_process").exec.mockImplementationOnce(
+      (command, callback) => {
+        callback(null, "", mockStderr);
+      }
+    );
+
+    await expect(execAsync("your command")).rejects.toMatch(mockStderr);
   });
 });

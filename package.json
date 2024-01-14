@@ -1,6 +1,6 @@
 {
   "name": "deps-updater",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Updater outdated packages",
   "type": "module",
   "main": "index.js",
@@ -40,10 +40,7 @@
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.8",
     "babel-jest": "^29.7.0",
-    "deps-updater": "^1.0.1",
+    "deps-updater": "^1.1.0",
     "jest": "^29.7.0"
-  },
-  "dependencies": {
-    "less": "^4.2.0"
   }
 }
